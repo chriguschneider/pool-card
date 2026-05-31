@@ -1,0 +1,44 @@
+{
+  "name": "pool-card",
+  "version": "0.1.0",
+  "description": "A lean, fast Home Assistant Lovelace card for the pool, built with Lit and uPlot.",
+  "type": "module",
+  "main": "dist/pool-card.js",
+  "module": "dist/pool-card.js",
+  "license": "MIT",
+  "author": "Chrigu Schneider",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chriguschneider/pool-card.git"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "watch": "rollup -c -w",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run build"
+  },
+  "dependencies": {
+    "lit": "^3.3.0",
+    "uplot": "^1.6.32"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-replace": "^6.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.0",
+    "@vitest/coverage-v8": "^2.1.4",
+    "eslint": "^9.13.0",
+    "happy-dom": "^15.7.4",
+    "rollup": "^4.24.0",
+    "tslib": "^2.8.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.12.0",
+    "vitest": "^2.1.4"
+  }
+}
