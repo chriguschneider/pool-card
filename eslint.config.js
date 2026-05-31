@@ -13,8 +13,12 @@ export default tseslint.config(
   sonarjs.configs.recommended,
   {
     // Build/config scripts run in Node.
-    files: ['**/*.js'],
+    files: ['**/*.js', '**/*.cjs', '**/*.mjs'],
     languageOptions: { globals: { ...globals.node } },
+  },
+  {
+    files: ['**/*.cjs'],
+    languageOptions: { sourceType: 'commonjs' },
   },
   {
     rules: {
