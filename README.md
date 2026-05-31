@@ -8,7 +8,7 @@ A lean, fast custom [Home Assistant](https://www.home-assistant.io/) Lovelace ca
 
 This card is not yet in the HACS default store, so add it as a custom repository:
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=chriguschneider&repository=pool-card&category=frontend)
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=chriguschneider&repository=pool-card&category=plugin)
 
 1. Click the button above (or in HACS: **⋮ → Custom repositories**, URL `https://github.com/chriguschneider/pool-card`, category **Dashboard**).
 2. Install **Pool Card** from HACS.
