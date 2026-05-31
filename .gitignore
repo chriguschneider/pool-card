@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.*
+.yarn/*
+
+# Build output
+dist/
+build/
+out/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Caches
+.cache/
+.vite/
+.eslintcache
+
+# Test / coverage
+coverage/
+
+# Debug artifacts
+claude-debug-output.txt*
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
