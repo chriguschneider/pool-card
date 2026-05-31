@@ -11,9 +11,9 @@ export class PoolCard extends LitElement {
 
   // `hass` is a plain setter, not a reactive property, on purpose: HA fires it
   // several times per second and we don't want a full re-render each time.
-  private _hass?: unknown;
-  set hass(hass: unknown) {
-    this._hass = hass;
+  // The placeholder doesn't read it yet — consumed from #5 (live panel) onward.
+  set hass(_hass: unknown) {
+    // intentionally unused for now
   }
 
   setConfig(config: PoolCardConfig): void {
@@ -68,7 +68,6 @@ window.customCards.push({
   preview: true,
 });
 
-// eslint-disable-next-line no-console
 console.info(
   `%c pool-card %c v${CARD_VERSION} `,
   'color:#fff;background:#1d76db;font-weight:700;border-radius:4px 0 0 4px;padding:2px 6px;',
