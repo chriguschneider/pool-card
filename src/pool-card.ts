@@ -27,7 +27,7 @@ export class PoolCard extends LitElement {
     return 3;
   }
 
-  static styles = css`
+  static readonly styles = css`
     .placeholder {
       padding: 16px;
       color: var(--primary-text-color, #212121);
