@@ -4,8 +4,9 @@ node_modules/
 .pnp.*
 .yarn/*
 
-# Build output
-dist/
+# Build output — dist/pool-card.js is committed so HACS (which runs no build)
+# can serve it from the branch. See weather-station-card ADR 0001.
+dist/*.map
 build/
 out/
 
