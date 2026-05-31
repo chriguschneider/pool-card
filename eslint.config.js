@@ -1,18 +1,20 @@
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
+import lit from 'eslint-plugin-lit';
+import sonarjs from 'eslint-plugin-sonarjs';
+import prettier from 'eslint-config-prettier';
+import globals from 'globals';
 
 export default tseslint.config(
-  {
-    ignores: ['dist/**', 'coverage/**', 'node_modules/**'],
-  },
+  { ignores: ['dist/**', 'coverage/**', 'node_modules/**'] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
+  lit.configs['flat/recommended'],
+  sonarjs.configs.recommended,
   {
     // Build/config scripts run in Node.
     files: ['**/*.js'],
-    languageOptions: {
-      globals: { process: 'readonly', URL: 'readonly', console: 'readonly' },
-    },
+    languageOptions: { globals: { ...globals.node } },
   },
   {
     rules: {
@@ -24,4 +26,6 @@ export default tseslint.config(
       ],
     },
   },
+  // Keep Prettier last so it disables conflicting stylistic rules.
+  prettier,
 );
