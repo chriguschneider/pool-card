@@ -1,10 +1,12 @@
 name: Validate
 
+# HACS plugin validation requires a published GitHub release, so this
+# runs at release time (and on demand), not on every push — otherwise
+# main would be red until the first release (tracked in #11).
 on:
-  push:
-  pull_request:
-  schedule:
-    - cron: '0 6 * * *'
+  release:
+    types: [published]
+  workflow_dispatch:
 
 jobs:
   hacs:
